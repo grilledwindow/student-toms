@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Pages - StudentTOMS</title>
+</head>
+
+<body>
+    <img id="np-logo" src="https://npweb2.np.edu.sg/np/traveldeclare/Style%20Library/LogoNP_logo.png" alt="" />
+    <div id="toms-declaration">
+        <h1 class="white">TOMS Declaration</h1>
+    </div>
+    <div id="together">
+        <div id="info">
+            <p>
+                <span id="name"></span>,
+                <span id="student-id"></span>
+            </p>
+            <p class="white">
+                <span id="date"></span><br />
+                <span id="time"></span>
+                <span id="period"></span>
+            </p>
+            <a href="./index.html">View My Submissions</a>
+        </div>
+        <div id="instructions">
+            <p>
+                <strong>Step 1</strong><br />
+                Show this screen to security
+            </p>
+            <br />
+            <p>
+                <strong>Step 2</strong><br />
+                Complete TraceTogether
+                <button>Open App</button>
+            </p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("name").innerHTML = localStorage["lastName"] + ' ' + localStorage["firstName"];
+            document.getElementById("student-id").innerHTML = localStorage["studentID"];
+
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            const now = new Date();
+
+            const date = now.getDate();
+            const month = months[now.getMonth()].toUpperCase();
+            const year = now.getFullYear();
+            const fullDate = (date < 10 ? '0' : '') + date + ' ' + month + ' ' + year;
+
+            const minutes = now.getMinutes();
+            const hours = now.getHours();
+
+            const time = hours + ':' + minutes;
+            const period = hours < 12 ? "AM" : "PM";
+
+            document.getElementById("date").innerHTML = fullDate;
+            document.getElementById("time").innerHTML = time;
+            document.getElementById("period").innerHTML = period;
+        });
+    </script>
+</body>
+
+</html>
