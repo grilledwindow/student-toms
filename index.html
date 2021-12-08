@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>StudentTOMS Generator</title>
+</head>
+
+<body>
+    <form id="form">
+        <input id="first-name" placeholder="first name" type="text" required /><br />
+        <input id="last-name" placeholder="last name" type="text" required /><br />
+        <input id="student-id" placeholder="student ID (eg 12345678X)" type="text" required /><br />
+        <input type="submit" value="Generate">
+    </form>
+    <a href="./toms.html">TOMS</a>
+    <script>
+        document.getElementById("form").addEventListener("submit", e => {
+            e.preventDefault();
+            localStorage["firstName"] = document.getElementById("first-name").value.toUpperCase();
+            localStorage["lastName"] = document.getElementById("last-name").value.toUpperCase();
+            localStorage["studentID"] = document.getElementById("student-id").value.toUpperCase();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: 'Muli', sans-serif;
+}
+
+input {
+    margin: 0.5em;
+    font-size: 1.3em;
+}
+img#np-logo {
+    margin-top: 1.8em;
+    width: 45%;
+}
+
+#toms-declaration {
+    background-color: #2f60ce;
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    margin: 1em auto;
+}
+
+#toms-declaration h1 {
+    font-weight: normal;
+    font-size: 2.8em;
+    padding: 0;
+    margin: 0.3em auto;
+}
+
+.white {
+    color: white;
+}
+
+#together {
+    width: 64%;
+    padding: 0 1em;
+}
+
+#info {
+    background-color: #31B404;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 0 1em;
+}
+
+#info p {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+#info p:nth-child(1) {
+    margin-top: 0.6em;
+}
+
+#info p:nth-child(2) {
+    margin-top: 0.2em;
+    margin-bottom: 0.8em;
+    font-size: 2.8em;
+}
+
+#period {
+    margin-left: 0.2em;
+    font-size: 1.2em;
+}
+
+
+#info a {
+    margin-bottom: 2em;
+    color: black;
+    font-size: 1.2em;
+}
+
+#instructions {
+    border: 1px solid grey;
+    color: #333;
+    font-size: 1.6em;
+}
+
+#instructions p {
+    margin: 0.4em;
+}
+
+#instructions button {
+    background-color: #2f60ce;
+    color: white;
+    padding: 0.7em;
+    border: none;
+}
