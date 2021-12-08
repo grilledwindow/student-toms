@@ -51,18 +51,22 @@
             const date = now.getDate();
             const month = months[now.getMonth()].toUpperCase();
             const year = now.getFullYear();
-            const fullDate = (date < 10 ? '0' : '') + date + ' ' + month + ' ' + year;
+            const fullDate = zeroPrefix(date) + ' ' + month + ' ' + year;
 
             const minutes = now.getMinutes();
             const hours = now.getHours();
 
-            const time = hours + ':' + minutes;
             const period = hours < 12 ? "AM" : "PM";
+            const time = zeroPrefix(hours) + ':' + zeroPrefix(minutes);
 
             document.getElementById("date").innerHTML = fullDate;
             document.getElementById("time").innerHTML = time;
             document.getElementById("period").innerHTML = period;
         });
+
+        function zeroPrefix(n) {
+            return (n < 10 ? '0' : '') + n;
+        }
     </script>
 </body>
 
